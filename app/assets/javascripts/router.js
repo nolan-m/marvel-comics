@@ -2,4 +2,5 @@
 
 ComicTracker.Router.map(function() {
   this.resource('comics', { path: '/' });
+  this.resource('comic', { path: '/comics/:id' });
 });

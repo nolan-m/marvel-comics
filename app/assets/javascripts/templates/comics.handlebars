@@ -1,2 +1,7 @@
 <h1>HOME</h1>
-test
+
+<ul>
+{{#each comic in controller}}
+  <li>{{#link-to 'comic' comic}}{{comic.title}}{{/link-to}}</li>
+{{/each}}
+</ul>

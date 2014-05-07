@@ -37,6 +37,6 @@ class ComicsController < ApplicationController
 private
 
   def comic_params
-    params.fetch(:comic).permit(:marvel_id, :title, :issueNumber, :description, :image)
+    params.fetch(:comic).permit(:marvel_id, :week_number, :title, :issueNumber, :description, :image)
   end
 end

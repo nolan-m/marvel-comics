@@ -11,7 +11,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'active_model_serializers'
-
+gem 'rest_client'
+gem 'nokogiri', '~> 1.6.1'
+gem 'json'
 
 group :development do
   gem 'better_errors'
@@ -21,6 +23,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'dotenv-rails'
 end
 
 group :test do
