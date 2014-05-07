@@ -1,6 +1,10 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.all.where(:week_number => Date.today.cweek)
+    if Comic.last.week_number == Date.today.cweek
+      @comics = Comic.all.where(:week_number => Date.today.cweek)
+    else
+      @comics = Comic.this_week(Comic.create_url)
+    end
     render :json => @comics
   end
 
