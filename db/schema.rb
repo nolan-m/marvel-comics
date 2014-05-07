@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507221541) do
+ActiveRecord::Schema.define(version: 20140507235250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140507221541) do
   create_table "comics", force: true do |t|
     t.string   "marvel_id"
     t.string   "title"
-    t.string   "issueNumber"
+    t.string   "issue_number"
     t.text     "description"
     t.string   "image"
     t.datetime "created_at"

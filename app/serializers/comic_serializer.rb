@@ -1,3 +1,3 @@
 class ComicSerializer < ActiveModel::Serializer
-  attributes :id, :marvel_id, :title, :issueNumber, :description, :image
+  attributes :id, :marvel_id, :title, :issue_number, :description, :image
 end
