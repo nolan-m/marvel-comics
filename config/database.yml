@@ -1,0 +1,10 @@
+
+development:
+  adapter: postgresql
+  database: ember_rails_development
+
+
+test:
+  adapter: postgresql
+  database: ember_rails_test
+
