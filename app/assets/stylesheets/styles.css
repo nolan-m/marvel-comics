@@ -1,0 +1,21 @@
+body {
+  margin-top: 70px;
+}
+
+#header{
+  padding-left: 100px;
+}
+#comics-container {
+  float: left;
+  width: 30%;
+  font-size: 1.2em;
+}
+#comic-info {
+  float: left;
+  width: 69%;
+}
+
+.cover {
+  width: 25%;
+  height: 25%;
+}

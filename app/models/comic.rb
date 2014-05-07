@@ -15,9 +15,11 @@ class Comic < ActiveRecord::Base
     if info['code'] == 200
       results = info['data']['results']
       results.each do |comic|
-        new_comic = Comic.create(:title => comic['title'], :issueNumber => comic['issueNumber'], :description => comic['description'], :marvel_id => comic['id'])
-        if comic['images'].first != nil
-          new_comic.update(:image => comic['images'].first['path'] + "." + comic['images'].first['extension'])
+        if Comic.last.week_number != Date.today.cweek
+          new_comic = Comic.create(:title => comic['title'], :issueNumber => comic['issueNumber'], :description => comic['description'], :marvel_id => comic['id'], :week_number => Date.today.cweek )
+          if comic['images'].first != nil
+            new_comic.update(:image => comic['images'].first['path'] + "." + comic['images'].first['extension'])
+          end
         end
       end
     end

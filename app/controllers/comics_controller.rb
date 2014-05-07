@@ -1,12 +1,11 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.all
+    @comics = Comic.all.where(:week_number => Date.today.cweek)
     render :json => @comics
   end
 
   def create
     @comic = Comic.new(comic_params)
-
     if @comic.save
       render :json => @comic, :status => 201
     else
