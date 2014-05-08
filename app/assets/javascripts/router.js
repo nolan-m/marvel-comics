@@ -8,6 +8,9 @@ ComicTracker.Router.map(function() {
     this.resource('next', function() {
       this.resource('comic', { path: '/:id' });
     });
+    this.resource('last', function() {
+      this.resource('comic', { path: '/:id' });
+    });
 
   });
 });

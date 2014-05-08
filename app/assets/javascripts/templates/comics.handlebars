@@ -1,12 +1,16 @@
 <div id="main">
   <div id='header'>
     <h1>ComicTrakr <small>Weekly Marvel Releases</small></h1>
+      <div id='last-week'>
+      {{#link-to 'last' }}Last Week{{/link-to}}
+    </div>
     <div id='current-week'>
       {{#link-to 'current' }}Current Week{{/link-to}}
     </div>
     <div id='next-week'>
       {{#link-to 'next' }}Next Week{{/link-to}}
     </div>
+
   </div>
 
   <div id="comics-container">

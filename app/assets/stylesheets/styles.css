@@ -61,7 +61,7 @@ li {
   float: left;
   text-align: justify;
 }
-#current-week, #next-week {
+#current-week, #next-week, #last-week {
   width: 150px;
   height: 40px;
   padding-top: 11px;
@@ -73,7 +73,7 @@ li {
   float: left;
   text-align: center;
 }
-#next-week {
+#next-week, #current-week {
   margin-left: 30px;
 }
 a:hover#current-week, a:hover#next-week {

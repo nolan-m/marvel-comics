@@ -40,6 +40,15 @@ ComicTracker.NextRoute = Ember.Route.extend({
   }
 });
 
+ComicTracker.LastRoute = Ember.Route.extend({
+  model: function(){
+      return this.modelFor('comics').filterBy('week_number', weeknumber - 1);
+  },
+  renderTemplate: function(controller) {
+    this.render('last', {controller: controller});
+  }
+});
+
 ComicTracker.CurrentRoute = Ember.Route.extend({
   model: function(){
       return this.modelFor('comics').filterBy('week_number', weeknumber);
