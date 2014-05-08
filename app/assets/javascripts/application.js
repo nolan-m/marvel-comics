@@ -18,6 +18,6 @@
 //= require_tree .
 
 // for more details see: http://emberjs.com/guides/application/
-ComicTracker = Ember.Application.create();
+ComicTracker = Ember.Application.create({LOG_TRANSITIONS: true});
 
 

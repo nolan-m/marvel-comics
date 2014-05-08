@@ -1,6 +1,6 @@
 class ComicsController < ApplicationController
   def index
-    @comics = Comic.all.where(:week_number => Date.today.cweek)
+    @comics = Comic.all
     render :json => @comics
   end
 

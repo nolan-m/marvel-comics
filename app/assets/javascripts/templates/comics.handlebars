@@ -1,12 +1,8 @@
 <div id='header'>
-  <h1>HOME</h1>
-</div>
-<div id="comics-container">
-  <ul>
-  {{#each comic in controller}}
-    <li>{{#link-to 'comic' comic}}{{comic.title}}{{/link-to}}</li>
-  {{/each}}
-  </ul>
+  <h1>This Week</h1>
+  {{#link-to 'next' }}Next Week{{/link-to}}
+  {{#link-to 'current' }}Current Week{{/link-to}}
+  {{#link-to 'comics' }}Index{{/link-to}}
 </div>
 
 <div id="comic-info">
