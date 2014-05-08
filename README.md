@@ -2,13 +2,11 @@
 
 -----
 
-* Displays new comic releases for the week.
-* 
+* Displays Marvel comic releases for last week, current week, and next week.
+* Details include title, issue number, description, and cover image for each comic.
+* Uses Marvel API to get weekly release information then stores that data with a RESTful API backend.
+* Ember front end displays weekly comic list and comic details.
 
-Roadmap:
+Known Issues:
 
-Prevent issues from being saved twice.
-See last week and next week issues as well.
-  -lastweekcontroller & nextweekcontroller
-
-always create next week issues, then look back to find current week's
+Cannot nest resource under two different resources.  Always shows 'Last Week' list when trying to view comic details.
