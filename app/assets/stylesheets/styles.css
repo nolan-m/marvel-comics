@@ -6,7 +6,7 @@ body {
 #main {
   width: 80%;
   margin: 0 auto;
-  height: 900px;
+  height: 950px;
   border: 1px black dashed;
   background-color: #E8EAE8;
 }
@@ -18,7 +18,7 @@ body {
 #comics-container {
   float: left;
   width: 100%;
-  height: 90%;
+  height: 88%;
   font-size: 1.2em;
   border: 1px blue dashed;
 }
@@ -32,7 +32,12 @@ a {
   color: black;
   text-decoration: none;
 }
-h1 {
+a:hover {
+  color: #4CAB63;
+}
+h1 small {
+  padding-left: 10px;
+  color: #8A8889;
 }
 li {
   padding-bottom: 4px;
@@ -40,20 +45,37 @@ li {
 #comic-info {
   float: left;
   width: 60%;
-  height: 800px;
+  height: 100%;
   border: 1px red dashed;
   margin-left: 20px;
-
 }
-
 .cover {
-  width: 30%;
-  display: block;
-  margin: 0 auto;
+  width: 35%;
+  float: left;
+  margin-top: 25px;
 }
 .text {
-  margin-top: 35px;
+  width: 60%;
   font-size: 1.3em;
-  margin-left: 5px;
+  margin-left: 25px;
+  float: left;
   text-align: justify;
+}
+#current-week, #next-week {
+  width: 150px;
+  height: 40px;
+  padding-top: 11px;
+  padding-left: 3px;
+  padding-right: 8px;
+  font-size: 1.5em;
+  background-color: #4CAB63;
+  color: white;
+  float: left;
+  text-align: center;
+}
+#next-week {
+  margin-left: 30px;
+}
+a:hover#current-week, a:hover#next-week {
+  color: white;
 }
