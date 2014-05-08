@@ -1,10 +1,10 @@
 <h1>{{title}}</h1>
-<img {{bind-attr src='image'}} class='image-responsive cover'>
+<img {{bind-attr src='image'}} class='cover'>
 
-<p>Issue Number: {{issue_number}}</p>
+<div class="text">
+  <p>Issue Number: {{issue_number}}</p>
 
-{{description}}
+  {{description}}
+</div>
 
-
-<hr>
-{{#link-to 'comics'}}Back{{/link-to}}
+•

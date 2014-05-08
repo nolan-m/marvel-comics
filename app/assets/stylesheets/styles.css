@@ -1,21 +1,59 @@
 body {
   margin-top: 70px;
+  font-family: 'Fanwood Text', serif;
+  background: url(bg.png);
+}
+#main {
+  width: 80%;
+  margin: 0 auto;
+  height: 900px;
+  border: 1px black dashed;
+  background-color: #E8EAE8;
 }
 
 #header{
-  padding-left: 100px;
+  padding-left: 20px;
 }
+
 #comics-container {
   float: left;
-  width: 30%;
+  width: 100%;
+  height: 90%;
   font-size: 1.2em;
+  border: 1px blue dashed;
+}
+.week-container{
+  float: left;
+  width: 34%;
+  border: 1px green dashed;
+  margin: 15px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+}
+li {
+  padding-bottom: 4px;
 }
 #comic-info {
   float: left;
-  width: 69%;
+  width: 60%;
+  height: 800px;
+  border: 1px red dashed;
+  margin-left: 20px;
+
 }
 
 .cover {
-  width: 25%;
-  height: 25%;
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+}
+.text {
+  margin-top: 35px;
+  font-size: 1.3em;
+  margin-left: 5px;
+  text-align: justify;
 }

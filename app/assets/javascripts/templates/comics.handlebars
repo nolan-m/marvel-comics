@@ -1,10 +1,11 @@
-<div id='header'>
-  <h1>This Week</h1>
-  {{#link-to 'next' }}Next Week{{/link-to}}
-  {{#link-to 'current' }}Current Week{{/link-to}}
-  {{#link-to 'comics' }}Index{{/link-to}}
-</div>
+<div id="main">
+  <div id='header'>
+    <h1>Home</h1>
+    {{#link-to 'current' }}Current Week{{/link-to}}
+    {{#link-to 'next' }}Next Week{{/link-to}}
+  </div>
 
-<div id="comic-info">
-  {{outlet}}
+  <div id="comics-container">
+    {{outlet}}
+  </div>
 </div>

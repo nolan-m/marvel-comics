@@ -1,12 +1,12 @@
-<div id='header'>
+<div class='week-container'>
   <h1>Next Week</h1>
-</div>
 
   <ul>
   {{#each comic in controller}}
     <li>{{#link-to 'comic' comic}}{{comic.title}}{{/link-to}}</li>
   {{/each}}
   </ul>
+</div>
 
 <div id="comic-info">
   {{outlet}}
