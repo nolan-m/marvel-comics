@@ -1,18 +1,20 @@
 body {
   margin-top: 70px;
   font-family: 'Fanwood Text', serif;
-  background: url(bg.png);
+  background: black;
 }
 #main {
   width: 80%;
   margin: 0 auto;
   height: 950px;
   background-color: #E8EAE8;
+
 }
 
-#header{
+.header{
   padding-left: 20px;
   padding-top: 10px;
+  margin-left: 25px;
 }
 
 #comics-container {
@@ -70,9 +72,36 @@ li {
   float: left;
   text-align: center;
 }
-#next-week, #current-week {
+#next-week, #current-week, #last-week {
   margin-left: 30px;
 }
 a:hover#current-week, a:hover#next-week {
   color: white;
+}
+#title {
+  margin-left: 35px;
+}
+
+.page-wrap {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  background: url(bg.png);
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
 }
