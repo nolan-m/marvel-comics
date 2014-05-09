@@ -1,11 +1,9 @@
 class ComicsController < ApplicationController
   def index
-    Comic.all.sort_by! {|c| c.week_number}
-    if Comic.last.week_number != Date.today.cweek + 1
-      Comic.next_week(Comic.create_url)
-    else
-      puts 'nope'
-    end
+    # Week.all.sort_by! {|w| w.week_number}
+    # if Week.last.week_number != Date.today.cweek + 1
+    #   Comic.next_week(Comic.create_url)
+    # end
     @comics = Comic.all
     render :json => @comics
   end

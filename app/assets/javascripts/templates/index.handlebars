@@ -1,0 +1,11 @@
+WELCOME
+
+
+<ul>
+{{#each }}
+  <li>{{#link-to 'week' this }}{{week_number}}{{/link-to}}</li>
+{{/each}}
+</ul>
+
+<p>
+{{outlet}}

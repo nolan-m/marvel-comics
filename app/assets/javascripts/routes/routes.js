@@ -13,49 +13,71 @@ var mydate = new Date();
 var weeknumber = mydate.getWeek();
 
 
-ComicTracker.ComicsRoute = Ember.Route.extend({
+ComicTracker.IndexRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('comic');
+    var weeks = this.get('store').findAll('week');
+    return weeks;
   }
 })
 
-ComicTracker.ComicRoute = Ember.Route.extend({
+ComicTracker.WeekRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('comic', params.id);
+    var week = this.store.find('week', params.week_id);
+    return week;
   }
 })
 
-ComicTracker.ComicsIndexRoute = Ember.Route.extend({
-  model: function() {
-    return this.modelFor('comics');
-  }
-});
+// ComicTracker.ComicRoute = Ember.Route.extend({
+//   model: function(params) {
+//     return this.store.find('comic', params.id);
+//   }
+// })
 
-ComicTracker.NextRoute = Ember.Route.extend({
-  model: function(){
-      return this.modelFor('comics').filterBy('week_number', weeknumber + 1);
-  },
-  renderTemplate: function(controller) {
-    this.render('next', {controller: controller});
-  }
-});
 
-ComicTracker.LastRoute = Ember.Route.extend({
-  model: function(){
-      return this.modelFor('comics').filterBy('week_number', weeknumber - 1);
-  },
-  renderTemplate: function(controller) {
-    this.render('last', {controller: controller});
-  }
-});
+// ComicTracker.NextRoute = Ember.Route.extend({
+//   model: function(){
+//       return this.modelFor('comics').filterBy('week_number', weeknumber + 1);
+//   },
+//   renderTemplate: function(controller) {
+//     this.render('next', {controller: controller});
+//   }
+// });
 
-ComicTracker.CurrentRoute = Ember.Route.extend({
-  model: function(){
-      return this.modelFor('comics').filterBy('week_number', weeknumber);
-  },
-  renderTemplate: function(controller) {
-    this.render('current', {controller: controller});
-  }
-});
+
+
+
+// ComicTracker.LastRoute = Ember.Route.extend({
+//   model: function(){
+//       return this.modelFor('comics').filterBy('week_number', weeknumber - 1);
+//   },
+//   renderTemplate: function(controller) {
+//     this.render('last', {controller: controller});
+//   }
+// });
+
+
+
+// ComicTracker.CurrentRoute = Ember.Route.extend({
+//   model: function(){
+//       return this.modelFor('comics').filterBy('week_number', weeknumber);
+//   },
+//   renderTemplate: function(controller) {
+//     this.render('current', {controller: controller});
+//   }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

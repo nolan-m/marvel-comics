@@ -1,0 +1,9 @@
+<h1>{{week_number}}</h1>
+
+<ul>
+{{#each comic in comics }}
+    <li>{{#link-to 'comic' comic}}{{comic.title}}{{/link-to}}</li>
+{{/each}}
+</ul>
+
+{{outlet}}
