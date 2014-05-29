@@ -27,11 +27,11 @@ ComicTracker.IndexRoute = Ember.Route.extend({
 ComicTracker.WeekRoute = Ember.Route.extend({
   model: function(params) {
     if (params.week_id === 'current') {
-      var week = this.store.find('week', 2);
+      var week = this.store.find('week', 5);
     } else if (params.week_id === 'next') {
-      var week = this.store.find('week', 3);
+      var week = this.store.find('week', 6);
     } else {
-      var week = this.store.find('week', 1);
+      var week = this.store.find('week', 4);
     }
     return week;
   }
