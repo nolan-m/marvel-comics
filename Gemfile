@@ -14,6 +14,7 @@ gem 'active_model_serializers'
 gem 'rest_client'
 gem 'nokogiri', '~> 1.6.1'
 gem 'json'
+gem 'rails_12factor', group: :production
 
 group :development do
   gem 'better_errors'
@@ -29,3 +30,4 @@ end
 group :test do
   gem 'shoulda-matchers'
 end
+
