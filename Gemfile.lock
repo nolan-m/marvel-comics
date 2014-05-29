@@ -160,7 +160,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   dotenv-rails
-  ember-data-source (~> 1.0.0.beta.7)
+  ember-data-source (~> 1.0.0.beta.6)
   ember-rails
   jbuilder (~> 1.2)
   jquery-rails

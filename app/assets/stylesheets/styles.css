@@ -6,9 +6,9 @@ body {
 #main {
   width: 80%;
   margin: 0 auto;
-  height: 950px;
+  height: 1020px;
   background-color: #E8EAE8;
-
+  padding-bottom: 100px;
 }
 
 .header{
@@ -20,7 +20,7 @@ body {
 #comics-container {
   float: left;
   width: 100%;
-  height: 88%;
+  height: 100%;
   font-size: 1.2em;
 }
 .week-container{
@@ -80,6 +80,9 @@ a:hover#current-week, a:hover#next-week {
 }
 #title {
   margin-left: 35px;
+}
+.text{
+  overflow: auto;
 }
 
 .page-wrap {
