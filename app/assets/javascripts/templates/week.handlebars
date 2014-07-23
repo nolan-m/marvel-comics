@@ -1,6 +1,6 @@
 <div id='title' class="row"><h1>Week Number: {{week_number}}</h1></div>
 
-<div class='week-container col-md-3'>
+<div class='week-container col-md-4'>
   <ul>
   {{#each comic in comics }}
       <li>{{#link-to 'comic' comic}}{{comic.title}}{{/link-to}}</li>
@@ -8,6 +8,6 @@
   </ul>
 </div>
 
-<div id="comic-info" class="col-md-7">
+<div id="comic-info" class="col-md-8">
   {{outlet}}
 </div>

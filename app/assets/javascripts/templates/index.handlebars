@@ -1,12 +1,14 @@
-<div class="col-md-10">
-  <div class="header row">
-    <h1>ComicTrackr</h1>
-    <div id="last-week"> {{#link-to 'week' 'last'}}Last Week{{/link-to}}</div>
-    <div id="current-week"> {{#link-to 'week' 'current'}}Current Week{{/link-to}}</div>
-    <div id="next-week"> {{#link-to 'week' 'next'}}Next Week{{/link-to}}</div>
-  </div>
-
-    <div id="comics-container" class="row">
-      {{outlet}}
+<div class="container" id="main">
+  <div class="col-md-12">
+    <div class="header row">
+      <h1>ComicTrackr</h1>
+      <div id="last-week" class="btn"> {{#link-to 'week' 'last'}}Last Week{{/link-to}}</div>
+      <div id="current-week" class="btn"> {{#link-to 'week' 'current'}}Current Week{{/link-to}}</div>
+      <div id="next-week" class="btn"> {{#link-to 'week' 'next'}}Next Week{{/link-to}}</div>
     </div>
+
+      <div id="comics-container" class="row">
+        {{outlet}}
+      </div>
+  </div>
 </div>
