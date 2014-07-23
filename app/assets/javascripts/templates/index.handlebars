@@ -1,14 +1,12 @@
-<div class='page-wrap'>
-    <div id="main">
-  <div class="header">
+<div class="col-md-10">
+  <div class="header row">
     <h1>ComicTrackr</h1>
     <div id="last-week"> {{#link-to 'week' 'last'}}Last Week{{/link-to}}</div>
     <div id="current-week"> {{#link-to 'week' 'current'}}Current Week{{/link-to}}</div>
     <div id="next-week"> {{#link-to 'week' 'next'}}Next Week{{/link-to}}</div>
   </div>
 
-    <div id="comics-container">
+    <div id="comics-container" class="row">
       {{outlet}}
     </div>
-  </div>
 </div>
