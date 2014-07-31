@@ -1,7 +1,7 @@
 class ComicsController < ApplicationController
   def index
     Week.all.sort_by! {|w| w.week_number}
-    if Week.last.week_number != Date.today.cweek + 1
+    if Week.last.week_number != (Date.today.cweek + 1).to_s
       Comic.seed
     end
     @comics = Comic.all
