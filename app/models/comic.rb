@@ -40,8 +40,10 @@ class Comic < ActiveRecord::Base
 
     weeks.each do |key, value|
       url = Comic.create_url(key)
-      week = Week.create(:week_number => Date.today.cweek + value)
-      Comic.fetch_week(url, week)
+      week = Week.new(:week_number => Date.today.cweek + value)
+      if week.save
+        Comic.fetch_week(url, week)
+      end
     end
   end
 end
