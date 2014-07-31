@@ -20,10 +20,12 @@ class Comic < ActiveRecord::Base
         if comic['description'] == nil
           comic['description'] = 'No description available.'
         else
-          comic['description'].gsub!('• ', ' ')
-          comic['description'].gsub!("\n", ' ')
+          comic['description'].gsub!("• ", " ")
+          comic['description'].gsub!("\n", " ")
+          comic['description'].gsub!("&#39;", "'")
+          comic['description'].gsub!("&quot;", '"')
         end
-        new_comic = Comic.create(:title => comic['title'], :issue_number => comic['issueNumber'], :description => comic['description'], :marvel_id => comic['id'], :week_id => week.id )
+        new_comic = Comic.new(:title => comic['title'], :issue_number => comic['issueNumber'], :description => comic['description'], :marvel_id => comic['id'], :week_id => week.id )
         if new_comic.save
           if comic['images'].first == nil
             new_comic.update(:image => 'http://img4.wikia.nocookie.net/__cb20091008022508/marveldatabase/images/3/35/Generic_Comic_Book_Vol_1_1.jpg')
